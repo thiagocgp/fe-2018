@@ -1,0 +1,570 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="JS/utils_index.js"></script>
+</head>
+
+<body>
+    <div id="div_Cadastro" style="display:block">
+
+        <!-- Identificador -->
+
+        <td>Identificação de pacientes</td>
+        
+        <br><br>
+
+        <div id="div_Identificador">
+            <table id="tbl_Identificador">
+                <tr>
+                    <td>
+                        <label id="lbl_TipoIdentificador">Tipo do Identificador:</label>
+                        <br>
+                        <select id="sel_TipoIdentificador" onchange="mudarIdentificador(this.value)">
+                            <option value=""></option>
+                            <option value="rg">RG</option>
+                            <option value="cpf">CPF</option>
+                            <option value="passaporte">Passaporte</option>
+                            <option value="ctps">CTPS</option>
+                            <option value="certidao">Certidão</option>
+                            <option value="eleitor">Título de Eleitor</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label id="lbl_AreaGeografica">Área Geográfica:</label>
+                        <select id="sel_AreaGeografica">
+                            <option value=""></option>
+                            <option value="local">Local</option>
+                            <option value="area">Área, Região ou Distrito</option>
+                            <option value="estado">Estado, Província ou Território</option>
+                            <option value="nacional">Nacional</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="lbl_Designacao">Designação:</label>
+                        <br>
+                        <input id="txt_Designacao" type="text">
+                    </td>
+                    <td>
+                        <label id="lbl_Emissor">Emissor:</label>
+                        <br>
+                        <input id="txt_Emissor" type="text">
+                    </td>
+                    <td>
+                        <label id="lbl_DataEmissao">Data de Emissão:</label>
+                        <br>
+                        <input id="dt_DataEmissao" type="date">
+                    </td>
+                </tr>
+                <tr></tr>
+            </table>
+        </div>
+        <div id="div_IdentificadorCTPS" style="display:none">
+            <table id="tbl_IdentificadorCTPS">
+                <tr>
+                    <td>
+                        <label id="lbl_SerieCTPS">Série:</label>
+                        <br>
+                        <input id="txt_SerieCTPS" type="number">
+                    </td>
+                    <td>
+                        <label id="lbl_EstadoCTPS">Estado:</label>
+                        <br>
+                        <select id="sel_Estados">
+                            <option value=""></option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MG">MinasGerais</option>
+                            <option value="MS">Mato Grossodo Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="PR">Paraná</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="div_IdentificadorCertidao" style="display:none">
+            <table id="tbl_IdentificadorCertidao">
+                <tr>
+                    <td>
+                        <label id="lbl_TipoCertidao">Tipo da Certidão:</label>
+                        <br>
+                        <select id="sel_TipoCertidao">
+                            <option value=""></option>
+                            <option value="nascimento">Nascimento</option>
+                            <option value="casamento">Casamento</option>
+                            <option value="divorcio">Divórcio</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label id="lbl_NomeCartorio">Nome do Cartório:</label>
+                        <br>
+                        <input id="txt_NomeCartorio" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="lbl_Livro">Livro:</label>
+                        <br>
+                        <input id="txt_Livro" type="number">
+                    </td>
+                    <td>
+                        <label id="lbl_Folha">Folha:</label>
+                        <br>
+                        <input id="txt_Folha" type="number">
+                    </td>
+                    <td>
+                        <label id="lbl_Termo">Termo:</label>
+                        <br>
+                        <input id="txt_Termo" type="number">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="div_IdentificadorEleitor" style="display:none">
+            <table id="tbl_IdentificadorEleitor">
+                <tr>
+                    <td>
+                        <label id="lbl_Secao">Seção:</label>
+                        <br>
+                        <input id="txt_Secao" type="number">
+                    </td>
+                    <td>
+                        <label id="lbl_Zona">Zona:</label>
+                        <br>
+                        <input id="txt_Zona" type="number">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+
+        <!-- Nome -->
+
+        <div id="div_Nome" style="display:block">
+            <table id="tbl_Nome">
+                <tr>
+                    <td>
+                        <label id="lbl_NomeAtribuido">Nome:</label>
+                        <br>
+                        <input id="txt_NomeAtribuido" type="text" oninput="nomeMudou(1)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="lbl_Sobrenome">Sobrenome:</label>
+                        <br>
+                        <input id="txt_Sobrenome" type="text" oninput="nomeMudou(2)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="lbl_Titulo">Título:</label>
+                        <br>
+                        <input id="txt_Titulo" type="text" placeholder="Dr. Prof. ..." oninput="nomeMudou(3)">
+                    </td>
+                    <td>
+                        <label id="lbl_Sufixo">Sufixo:</label>
+                        <br>
+                        <input id="txt_Sufixo" type="text" placeholder="Júnior Filho Neto ..." oninput="nomeMudou(4)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="lbl_NomeCompleto">Nome Completo:</label>
+                        <br>
+                        <label id="lbl_NomeCompletoGerado"></label>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <label id="lbl_UtilizacaoNome"> Grupo de utilização do nome </label>
+            <br>
+            <select id="sel_UtilizacaoNome">
+                <option value=""></option>
+                <option value="R">1. Relatório</option>
+                <option value="N">2. Nome de recém-nascido</option>
+                <option value="C">3. Nome profissional ou comercial</option>
+                <option value="S">4. Nome de solteiro</option>
+                <option value="L">5. Nome registrado</option>
+                <option value="O">8. Outro nome</option>
+            </select>
+            <br>
+            <br>
+            <input id="btn_AddNome" type="button" value="Adicionar Nome">
+            <br>
+            <br>
+        </div>
+
+        <!-- ******************************************************************************************************************************** -->
+
+        <div class="box">
+            <div class="field">
+                <label class="label">Mãe</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Nome completo da mãe">
+                </div>
+            </div>
+            <br>
+            <div class="field">
+                <label class="label">Pai</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Nome completo do pai">
+                </div>
+            </div>
+            <br>
+            <div class="field">
+                <label class="label">Situação familiar (convive com)</label>
+                <div class="control">
+                    <input class="checkbox" type="checkbox" value="1">
+                    <span>&nbsp;Companheiro(a) e filho(s)</span>
+                    <br>
+                    <input class="checkbox" type="checkbox" value="2">
+                    <span>&nbsp;Companheiro(a) com laços conjugais e sem filhos</span>
+                    <br>
+                    <input class="checkbox" type="checkbox" value="3">
+                    <span>&nbsp;Companheiro(a), com filho(s) e/ou outro(s) familiar(es)</span>
+                    <br>
+                    <input class="checkbox" type="checkbox" value="4">
+                    <span>&nbsp;Familiar(es) sem companheiro(a)</span>
+                    <br>
+                    <input class="checkbox" type="checkbox" value="5">
+                    <span>&nbsp;Outra(s) pessoa(s) sem laços consanguíneos e/ou laços conjugais</span>
+                    <br>
+                    <input class="checkbox" type="checkbox" value="6">
+                    <span>&nbsp;Vive só</span>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <!-- data de nascimento -->
+            <div class="box">
+                <div class="field">
+                    <label class="label">Data de nascimento</label>
+                    <input type="date">
+                </div>
+                <br>
+                <div class="field">
+                    <label class="label">Inicador de acurácia</label> Dia:
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="A"> Acurado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="E"> Estimado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="U"> Desconhecido
+                    </label>
+                    <br> Mês:
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="A"> Acurado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="E"> Estimado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="U"> Desconhecido
+                    </label>
+                    <br> Ano:
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="A"> Acurado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="E"> Estimado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="U"> Desconhecido
+                    </label>
+                </div>
+                <br>
+                <div class="field">
+                    <label class="label">Seguimento</label>
+                    <div class="control">
+                        <input type="checkbox" class="checkbox">&nbsp;Data precisa de seguimento
+                    </div>
+                </div>
+            </div>
+
+            <!-- óbito -->
+            <div class="box">
+                <div class="field">
+                    <label class="label">Óbito</label>
+                    <input type="date">
+                </div>
+                <br>
+                <div class="field">
+                    <label class="label">Inicador de acurácia</label> Dia:
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="A"> Acurado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="E"> Estimado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="U"> Desconhecido
+                    </label>
+                    <br> Mês:
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="A"> Acurado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="E"> Estimado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="U"> Desconhecido
+                    </label>
+                    <br> Ano:
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="A"> Acurado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="E"> Estimado
+                    </label>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="dia" value="U"> Desconhecido
+                    </label>
+                </div>
+                <br>
+                <div class="field">
+                    <label class="label">Fonte de notificação</label>
+                    <div class="control">
+                        <label class="radio">
+                            <input class="radio" type="radio" name="dia" value="1"> Cartório
+                        </label>
+                        <label class="radio">
+                            <input class="radio" type="radio" name="dia" value="2"> Prestador de assistência à saúde</label>
+                        <label class="radio">
+                            <input class="radio" type="radio" name="dia" value="3"> Parente
+                        </label>
+                        <label class="radio">
+                            <input class="radio" type="radio" name="dia" value="4"> Outro
+                        </label>
+                        <label class="radio">
+                            <input class="radio" type="radio" name="dia" value="9" checked> Desconhecido
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="field">
+                <label class="label">Raça/cor</label>
+                <div class="control">
+                    <input class="checkbox" type="checkbox" value="1">
+                    <span>&nbsp;Branca</span>
+                    <br>
+                    <input class="checkbox" type="checkbox" value="2">
+                    <span>&nbsp;Preta</span>
+                    <br>
+                    <input class="checkbox" type="checkbox" value="3">
+                    <span>&nbsp;Parda</span>
+                    <br>
+                    <input class="checkbox" type="checkbox" value="4">
+                    <span>&nbsp;Amarela</span>
+                    <br>
+                    <input class="checkbox" type="checkbox" value="5">
+                    <span>&nbsp;Indígena</span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="box">
+            <div class="field">
+                <label class="label">Sexo</label>
+                <div class="control">
+                    <label class="radio">
+                        <input class="radio" type="radio" name="sexo" value="1"> Masculino (M)
+                    </label>
+                    <br>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="sexo" value="2"> Feminino (F)
+                    </label>
+                    <br>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="sexo" value="3"> Intersexo ou indeterminado (I)</label>
+                    <br>
+                    <label class="radio">
+                        <input class="radio" type="radio" name="sexo" value="9" checked> Não declarado (U)</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- situação familiar -->
+        <br>
+        <div class="box">
+            <div class="field">
+                <label class="label">Situação familiar (convive com)</label>
+                <div class="select">
+                    <select>
+                        <option value="1">Companheiro(a) e filho(s)</option>
+                        <option value="2">Companheiro(a) com laços conjugais e sem filhos
+                        </option>
+                        <option value="3">Companheiro(a), com filho(s) e/ou outro(s) familiares.
+                        </option>
+                        <option value="4">Familiar(es) sem companheiro(a)
+                        </option>
+                        <option value="5">Outra(s) pessoa(s), sem laços consanguíneos e/ou laços conjugais
+                        </option>
+                        <option value="6">Vive só</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- nacionalidade -->
+        <br>
+        <div class="box">
+            <label class="label">Nacionalidade</label>
+            <div class="control" onchange="nacionalidade();">
+                <label class="radio">
+                    <input id="brasileira" type="radio" name="nacionalidade" value="1" checked> Brasileiro
+                </label>
+                <label class="radio">
+                    <input type="radio" name="nacionalidade" value="2"> Estrangeiro
+                </label>
+            </div>
+
+            <div id="db" class="box">
+                <div class="field">
+                    <div class="control">
+                        <label class="label">Estado de nascimento</label>
+                        <div class="select is-small">
+                            <select id="estados" onchange="atualizaMunicipios()">
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="PR">Paraná</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label id="municipio-label" class="label"></label>
+                        <div class="select is-small">
+                            <select id="municipios">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="de" class="box">
+                <div class="field">
+                    <div class="control">
+                        <label class="label">País de nascimento</label>
+                        <div class="select is-small">
+                            <select id="paises">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Data de entrada no Brasil</label>
+                    <input type="date">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- pluralidade de nascimentos -->
+        <br>
+        <div class="box">
+            <div class="field">
+                <div class="control">
+                    <label class="label">Pluralidade de nascimentos</label>
+                    <div class="select is-small">
+                        <select>
+                            <option value="1">Único</option>
+                            <option value="2">Gêmeos</option>
+                            <option value="3">Trigêmeos</option>
+                            <option value="4">Quádruplos</option>
+                            <option value="5">Quíntuplos</option>
+                            <option value="6">Sêxtuplos</option>
+                            <option value="7">Outros</option>
+                            <option value="9" selected>Não declarado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ordem de nascimento -->
+        <div class="box">
+            <div class="field">
+                <div class="control">
+                    <label class="label">Ordem de nascimento</label>
+                    <div class="select is-small">
+                        <select>
+                            <option value="1">Único ou primeiro</option>
+                            <option value="2">Segundo</option>
+                            <option value="3">Terceiro</option>
+                            <option value="4">Quarto</option>
+                            <option value="5">Quinto</option>
+                            <option value="6">Sexto</option>
+                            <option value="7">Outros</option>
+                            <option value="9" selected>Não declarado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- comentário de identificação -->
+        <div class="box">
+            <div class="field">
+                <div class="control">
+                    <label class="label">Comentário de identificação</label>
+                    <textarea class="textarea is-small" placeholder="exemplo: dois pacientes com o mesmo nome. Não é o mesmo que 123456"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
