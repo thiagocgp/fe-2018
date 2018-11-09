@@ -10,10 +10,6 @@
 
         <!-- Identificador -->
 
-        <td>Identificação de pacientes</td>
-        
-        <br><br>
-
         <div id="div_Identificador">
             <table id="tbl_Identificador">
                 <tr>
@@ -183,23 +179,15 @@
                     <td>
                         <label id="lbl_Titulo">Título:</label>
                         <br>
-                        <input id="txt_Titulo" type="text" placeholder="Dr. Prof. ..." oninput="nomeMudou(3)">
+                        <input id="txt_Titulo" type="text" oninput="nomeMudou(3)">
                     </td>
                     <td>
                         <label id="lbl_Sufixo">Sufixo:</label>
                         <br>
-                        <input id="txt_Sufixo" type="text" placeholder="Júnior Filho Neto ..." oninput="nomeMudou(4)">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label id="lbl_NomeCompleto">Nome Completo:</label>
-                        <br>
-                        <label id="lbl_NomeCompletoGerado"></label>
+                        <input id="txt_Sufixo" type="text" oninput="nomeMudou(4)">
                     </td>
                 </tr>
             </table>
-            <br>
             <label id="lbl_UtilizacaoNome"> Grupo de utilização do nome </label>
             <br>
             <select id="sel_UtilizacaoNome">
@@ -211,12 +199,49 @@
                 <option value="L">5. Nome registrado</option>
                 <option value="O">8. Outro nome</option>
             </select>
-            <br>
-            <br>
-            <input id="btn_AddNome" type="button" value="Adicionar Nome">
-            <br>
-            <br>
         </div>
+        <br>
+        <input id="btn_AddNome" type="button" value="Adicionar Nome" onclick="adicionarNovoNome()">
+        <br><br>
+        <label id="lbl_NomeCompleto">Nome Completo:</label>
+        <br>
+        <input id="txt_NomeCompletoGerado1" type="text" disabled="disabled" style="display: none">
+        <label id="lbl_UtilizacaoNome1" style="display: none"></label>
+        <input id="btn_ApagarNome1" type="button" value="Apagar" onclick="apagarNome(1)" style="display: none">
+        <br id="br_nome1" style="display: none">
+        <input id="txt_NomeCompletoGerado2" type="text" disabled="disabled" style="display: none">
+        <label id="lbl_UtilizacaoNome2" style="display: none"></label>
+        <input id="btn_ApagarNome2" type="button" value="Apagar" onclick="apagarNome(2)" style="display: none">
+        <br id="br_nome2" style="display: none">
+        <input id="txt_NomeCompletoGerado3" type="text" disabled="disabled" style="display: none">
+        <label id="lbl_UtilizacaoNome3" style="display: none"></label>
+        <input id="btn_ApagarNome3" type="button" value="Apagar" onclick="apagarNome(3)" style="display: none">
+        <br id="br_nome3" style="display: none">
+        <input id="txt_NomeCompletoGerado4" type="text" disabled="disabled" style="display: none">
+        <label id="lbl_UtilizacaoNome4" style="display: none"></label>
+        <input id="btn_ApagarNome4" type="button" value="Apagar" onclick="apagarNome(4)" style="display: none">
+        <br id="br_nome4" style="display: none">
+        <input id="txt_NomeCompletoGerado5" type="text" disabled="disabled" style="display: none">
+        <label id="lbl_UtilizacaoNome5" style="display: none"></label>
+        <input id="btn_ApagarNome5" type="button" value="Apagar" onclick="apagarNome(5)" style="display: none">
+        <br id="br_nome5" style="display: none">
+        <input id="txt_NomeCompletoGerado6" type="text" disabled="disabled" style="display: none">
+        <label id="lbl_UtilizacaoNome6" style="display: none"></label>
+        <input id="btn_ApagarNome6" type="button" value="Apagar" onclick="apagarNome(6)" style="display: none">
+        <br id="br_nome6" style="display: none">
+        <input id="txt_NomeCompletoGerado7" type="text" disabled="disabled" style="display: none">
+        <label id="lbl_UtilizacaoNome7" style="display: none"></label>
+        <input id="btn_ApagarNome7" type="button" value="Apagar" onclick="apagarNome(7)" style="display: none">
+        <br id="br_nome7" style="display: none">
+        <input id="txt_NomeCompletoGerado8" type="text" disabled="disabled" style="display: none">
+        <label id="lbl_UtilizacaoNome8" style="display: none"></label>
+        <input id="btn_ApagarNome8" type="button" value="Apagar" onclick="apagarNome(8)" style="display: none">
+        <br id="br_nome8" style="display: none">
+        <input id="txt_NomeCompletoGerado9" type="text" disabled="disabled" style="display: none">
+        <label id="lbl_UtilizacaoNome9" style="display: none"></label>
+        <input id="btn_ApagarNome9" type="button" value="Apagar" onclick="apagarNome(9)" style="display: none">
+        <br id="br_nome9" style="display: none">
+        <br><br>
 
         <!-- ******************************************************************************************************************************** -->
 
