@@ -146,7 +146,6 @@ function adicionarNovoNome(){
     document.getElementById('txt_NomeCompletoGerado' + quantNomes).style.display = 'inline';
     document.getElementById('lbl_UtilizacaoNome' + quantNomes).style.display = 'inline';
     document.getElementById('btn_ApagarNome' + quantNomes).style.display = 'inline';
-    document.getElementById('br_nome' + quantNomes).style.display = 'inline';
 }
 
 function apagarNome(pos){
@@ -157,7 +156,6 @@ function apagarNome(pos){
         document.getElementById('lbl_UtilizacaoNome' + pos).innerHTML = '';
         document.getElementById('lbl_UtilizacaoNome' + pos).style.display = 'none';
         document.getElementById('btn_ApagarNome' + pos).style.display = 'none';
-        document.getElementById('br_nome' + pos).style.display = 'none';
         nomes.splice(pos - 1, 1);
         utilizacaoNome.splice(pos - 1, 1);
         quantNomes--;
@@ -176,7 +174,6 @@ function apagarNome(pos){
         document.getElementById('lbl_UtilizacaoNome' + quantNomes).innerHTML = '';
         document.getElementById('lbl_UtilizacaoNome' + quantNomes).style.display = 'none';
         document.getElementById('btn_ApagarNome' + quantNomes).style.display = 'none';
-        document.getElementById('br_nome' + quantNomes).style.display = 'none';
         
         quantNomes--;
 
