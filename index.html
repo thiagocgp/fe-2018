@@ -1176,11 +1176,102 @@
 
         </div>
 
+        <!-- Comunicação Eletrônica -->
+
+        <div id="div_ComunicacaoEletronica" class="col-sm-12 col-md10 col-lg-8 border rounded my-3">
+        
+            <div class="row">
+        
+                <div class="col-12 text-left my-3">
+        
+                    <h4>Comunicação Eletrônica</h4>
+        
+                </div>
+        
+            </div>
+        
+            <form>
+        
+                <!-- Meio de Comunicação -->
+                
+                <div class="form-row">
+        
+                    <div class="form-group col-sm-4">
+            
+                        <label id="lbl_meioComunicacao" for="sel_meioComunicacao" class="font-weight-bold">Meio de comunicação eletrônica</label>
+                        <select id="sel_meioComunicacao" class="form-control">
+                            <option value=""></option>
+                            <option value="T">Telefone</option>
+                            <option value="C">Telefone Celular</option>
+                            <option value="F">Fax</option>
+                            <option value="P">Pager</option>
+                            <option value="E">Correio eletrônico</option>
+                            <option value="U">URL</option>
+                            <option value="O">Outro</option>
+                        </select>
+            
+                    </div>
+            
+                    <!-- Código de preferência -->
+            
+                    <div class="form-group col-sm-4">
+            
+                        <label id="lbl_codPreferencia" for="sel_codPreferencia" class="font-weight-bold">Código de preferência</label>
+                        <select id="sel_codPreferencia" class="form-control">
+                            <option value=""></option>
+                            <option value="B">Horário comercial</option>
+                            <option value="D">Durante o dia</option>
+                            <option value="W">Finais de semana</option>
+                            <option value="A">Qualquer hora</option>
+                            <option value="E">Período noturno</option>
+                        </select>
+            
+                    </div>
+
+                    <!-- Código de utilização do contato eletrônico -->
+        
+                    <div class="form-group col-sm-4">
+                    
+                        <label id="lbl_codUtilizacao" for="sel_codUtilizacao" class="font-weight-bold">Código de utilização do contato eletrônico</label>
+                        <br>
+                        <select id="sel_codUtilizacao" class="form-control">
+                            <option value=""></option>
+                            <option value="B">Comercial</option>
+                            <option value="P">Pessoal</option>
+                            <option value="A">Tanto comercial quanto pessoal</option>
+                        </select>
+            
+                    </div>
+
+                    <!-- Detalhes da comunicação eletrônica -->
+
+                    <div class="form-group col-sm-6">
+                        
+                        <label for="txt_detalheComunicacaoEletronica" class="font-weight-bold">Detalhes da comunicação eletrônica</label>
+                        <input id="txt_detalheComunicacaoEletronica" class="form-control" type="text">
+            
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group col-sm-3 my-3">
+                            
+                        <input id="btn_AddComunicacao" type="button" class="form-control" value="Adicionar Comunicação Eletrônica " onclick="adicionarNovaComunicacao()">
+
+                    </div>
+
+                </div>
+                                      
+                <span id="spn_NovaComunicacao"></span>
+
+            </form>
+        
+        </div>
+
     </div>
         
-        
-    
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.js"></script>
