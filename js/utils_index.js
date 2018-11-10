@@ -183,3 +183,24 @@ function apagarNome(pos){
         }
     }
 }
+
+function checaPaisNascimento(){
+    var pais = document.getElementById('sel_Pais').value;
+    var dataEntrada = document.getElementById('div_DataEntrada');
+    var estadoBrasil = document.getElementById('div_EstadoNascBra');
+    var estadoOutroPais = document.getElementById('div_EstadoNasc');
+
+    if(pais == 'Brasil'){
+        document.getElementById('dat_DataEntradaPais').value = '';
+        dataEntrada.style.display = 'none';
+        estadoOutroPais.value = '';
+        estadoOutroPais.style.display = 'none';
+        estadoBrasil.style.display = 'block';
+    }
+    else{
+        dataEntrada.style.display = 'block';
+        estadoOutroPais.style.display = 'block';
+        estadoBrasil.value = '';
+        estadoBrasil.style.display = 'none';
+    }
+}
