@@ -1191,9 +1191,7 @@
             </div>
         
             <form>
-        
-                <!-- Meio de Comunicação -->
-                
+
                 <div class="form-row">
         
                     <div class="form-group col-sm-4">
@@ -1201,49 +1199,43 @@
                         <label id="lbl_meioComunicacao" for="sel_meioComunicacao" class="font-weight-bold">Meio de comunicação eletrônica</label>
                         <select id="sel_meioComunicacao" class="form-control">
                             <option value=""></option>
-                            <option value="T">Telefone</option>
-                            <option value="C">Telefone Celular</option>
-                            <option value="F">Fax</option>
-                            <option value="P">Pager</option>
-                            <option value="E">Correio eletrônico</option>
-                            <option value="U">URL</option>
-                            <option value="O">Outro</option>
+                            <option value="Telefone">Telefone</option>
+                            <option value="Telefone Celular">Telefone Celular</option>
+                            <option value="Fax">Fax</option>
+                            <option value="Pager">Pager</option>
+                            <option value="Correio eletrônico">Correio eletrônico</option>
+                            <option value="URL">URL</option>
+                            <option value="Outro">Outro</option>
                         </select>
             
                     </div>
-            
-                    <!-- Código de preferência -->
             
                     <div class="form-group col-sm-4">
             
                         <label id="lbl_codPreferencia" for="sel_codPreferencia" class="font-weight-bold">Código de preferência</label>
                         <select id="sel_codPreferencia" class="form-control">
                             <option value=""></option>
-                            <option value="B">Horário comercial</option>
-                            <option value="D">Durante o dia</option>
-                            <option value="W">Finais de semana</option>
-                            <option value="A">Qualquer hora</option>
-                            <option value="E">Período noturno</option>
+                            <option value="Horário comercial">Horário comercial</option>
+                            <option value="Durante o dia">Durante o dia</option>
+                            <option value="Finais de semana">Finais de semana</option>
+                            <option value="Qualquer hora">Qualquer hora</option>
+                            <option value="Período noturno">Período noturno</option>
                         </select>
             
                     </div>
 
-                    <!-- Código de utilização do contato eletrônico -->
-        
                     <div class="form-group col-sm-4">
                     
                         <label id="lbl_codUtilizacao" for="sel_codUtilizacao" class="font-weight-bold">Código de utilização do contato eletrônico</label>
                         <br>
                         <select id="sel_codUtilizacao" class="form-control">
                             <option value=""></option>
-                            <option value="B">Comercial</option>
-                            <option value="P">Pessoal</option>
-                            <option value="A">Tanto comercial quanto pessoal</option>
+                            <option value="Comercial">Comercial</option>
+                            <option value="Pessoal">Pessoal</option>
+                            <option value="Tanto comercial quanto pessoal">Tanto comercial quanto pessoal</option>
                         </select>
             
                     </div>
-
-                    <!-- Detalhes da comunicação eletrônica -->
 
                     <div class="form-group col-sm-6">
                         
@@ -1268,6 +1260,257 @@
 
             </form>
         
+        </div>
+
+        <!-- Endereco -->
+
+        <div id="div_Endereco" class="col-sm-12 col-md-10 col-lg-8 border rounded my-3">
+
+            <div class="row">
+
+                <div class="col-12 text-left my-3">
+
+                    <h4>Endereço</h4>
+
+                </div>
+                
+            </div>
+
+            <form>                
+
+                <div class="form-row">
+
+                    <div class="form-group col-sm-3">
+
+                        <label for="sel_TipoEndereco" class="font-weight-bold">Tipo de Endereço:</label>
+                        <select id="sel_TipoEndereco" class="form-control">
+                            <option value=""></option>
+                            <option value="1">Comercial</option>
+                            <option value="2">Correio ou postal</option>
+                            <option value="3">Acomodação temporária</option>
+                            <option value="4">Residencial</option>
+                            <option value="8">Sem endereço fixo</option>
+                            <option value="9">Desconhecido/não declarado</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="border rounded my-3 p-3">
+
+                    <div class="form-row">
+
+                        <div class="form-group col-sm-3">
+
+                            <label for="dat_DataInicial" class="font-weight-bold">Data Inicial:</label>
+                            <input id="dat_DataInicial" type="date" class="form-control">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group col-sm-12">
+
+                            <label class="font-weight-bold">Indicador de Acurácia</label>
+
+                        </div>
+
+                        <div class="form-group col-sm-2">
+
+                            <label>Dia:</label>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="A" class="form-check-input" id="radio_DataIni1" name="dataIni1">
+                                <label class="form-check-label" for="radio_DataIni1">Acurado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="E" class="form-check-input" id="radio_DataIni2" name="dataIni1">
+                                <label class="form-check-label" for="radio_DataIni2">Estimado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="U" class="form-check-input" id="radio_DataIni3" name="dataIni1">
+                                <label class="form-check-label" for="radio_DataIni3">Desconhecido</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group col-sm-2">
+
+                            <label>Mês:</label>
+                            
+                            <div class="form-check">
+
+                                <input type="radio" value="A" class="form-check-input" id="radio_DataIni4" name="dataIni2">
+                                <label class="form-check-label" for="radio_DataIni4">Acurado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="E" class="form-check-input" id="radio_DataIni5" name="dataIni2">
+                                <label class="form-check-label" for="radio_DataIni5">Estimado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="U" class="form-check-input" id="radio_DataIni6" name="dataIni2">
+                                <label class="form-check-label" for="radio_DataIni6">Desconhecido</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group col-sm-2">
+
+                            <label>Ano:</label>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="A" class="form-check-input" id="radio_DataIni7" name="dataIni3">
+                                <label class="form-check-label" for="radio_DataIni7">Acurado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="E" class="form-check-input" id="radio_DataIni8" name="dataIni3">
+                                <label class="form-check-label" for="radio_DataIni8">Estimado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="U" class="form-check-input" id="radio_DataIni9" name="dataIni3">
+                                <label class="form-check-label" for="radio_DataIni9">Desconhecido</label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>    
+
+                <div class="border rounded my-3 p-3">
+
+                    <div class="form-row">
+
+                        <div class="form-group col-sm-3">
+
+                            <label for="dat_DataFinal" class="font-weight-bold">Data Final:</label>
+                            <input id="dat_DataFinal" type="date" class="form-control">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group col-sm-12">
+
+                            <label class="font-weight-bold">Indicador de Acurácia</label>
+
+                        </div>
+
+                        <div class="form-group col-sm-2">
+
+                            <label>Dia:</label>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="A" class="form-check-input" id="radio_DataFim1" name="dataFinal1">
+                                <label class="form-check-label" for="radio_DataFim1">Acurado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="E" class="form-check-input" id="radio_DataFim2" name="dataFinal1">
+                                <label class="form-check-label" for="radio_DataFim2">Estimado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="U" class="form-check-input" id="radio_DataFim3" name="dataFinal1">
+                                <label class="form-check-label" for="radio_DataFim3">Desconhecido</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group col-sm-2">
+
+                            <label>Mês:</label>
+                            
+                            <div class="form-check">
+
+                                <input type="radio" value="A" class="form-check-input" id="radio_DataFim4" name="dataFinal2">
+                                <label class="form-check-label" for="radio_DataFim4">Acurado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="E" class="form-check-input" id="radio_DataFim5" name="dataFinal2">
+                                <label class="form-check-label" for="radio_DataFim5">Estimado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="U" class="form-check-input" id="radio_DataFim6" name="dataFinal2">
+                                <label class="form-check-label" for="radio_DataFim6">Desconhecido</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group col-sm-2">
+
+                            <label>Ano:</label>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="A" class="form-check-input" id="radio_DataFim7" name="dataFinal3">
+                                <label class="form-check-label" for="radio_DataFim7">Acurado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="E" class="form-check-input" id="radio_DataFim8" name="dataFinal3">
+                                <label class="form-check-label" for="radio_DataFim8">Estimado</label>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="radio" value="U" class="form-check-input" id="radio_DataFim9" name="dataFinal3">
+                                <label class="form-check-label" for="radio_DataFim9">Desconhecido</label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
         </div>
 
     </div>
