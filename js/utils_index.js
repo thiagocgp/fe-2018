@@ -234,3 +234,21 @@ function adicionarNovaComunicacao(){
     }
 
 }
+
+function checaPaisEndereco(){
+    var pais = document.getElementById('sel_PaisEndereco').value;
+    var estadoBrasil = document.getElementById('div_EstadoBrasilEndereco');
+    var estadoOutroPais = document.getElementById('div_EstadoEnderecoInter');
+
+    if(pais == 'Brasil'){
+        estadoOutroPais.value = '';
+        estadoOutroPais.style.display = 'none';
+        estadoBrasil.style.display = 'block';
+    }
+    else{
+        estadoOutroPais.style.display = 'block';
+        estadoBrasil.value = '';
+        estadoBrasil.style.display = 'none';
+    }
+
+}
